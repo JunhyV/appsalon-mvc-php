@@ -1,0 +1,26 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.page {
+  &__header {
+    @include m.tablet {
+        text-align: center;
+      & h1 {
+        margin: v.$separacion 0;
+      }
+    }
+  }
+
+  &__enlaces{
+    display: flex;
+    justify-content: space-between;
+
+    & a{
+      color: v.$blanco;
+
+      &:hover{
+        color: v.$azul;
+      }
+    }
+  }
+}

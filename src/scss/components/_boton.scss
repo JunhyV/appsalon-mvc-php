@@ -1,0 +1,27 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.boton--azul{
+    @include m.boton(v.$azul, v.$blanco);
+}
+.boton--rojo{
+    @include m.boton(v.$rojo, v.$blanco);
+    margin: 0;
+}
+
+.boton--negro{
+    color: v.$blanco;
+    font-weight: v.$bold;
+    text-align: center;
+    padding: calc(v.$separacion / 4);
+    transition-property: background-color;
+    transition-duration: .3s;
+
+    &:hover{
+        background-color: lighten($color: v.$negro, $amount: 10%);
+    }
+}
+
+.boton--invisible{
+    visibility: hidden;
+}   

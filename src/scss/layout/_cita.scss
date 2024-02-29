@@ -1,0 +1,9 @@
+.cita{
+    &__secciones{
+        display: none;
+    }
+    
+    &--visible{
+        display: block;
+    }
+}

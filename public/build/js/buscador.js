@@ -1,0 +1,1 @@
+const buscador=document.querySelector("#fecha");function filtrarPorFecha(e){window.location="?fecha="+e.target.value}document.addEventListener("DOMContentLoaded",()=>{buscador.addEventListener("change",filtrarPorFecha)});

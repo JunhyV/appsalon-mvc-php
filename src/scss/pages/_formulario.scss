@@ -1,0 +1,25 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.form{
+    &__campo{
+        display: flex;
+        gap: calc(v.$separacion / 2);
+        margin-bottom: calc(v.$separacion / 2);
+
+        & label{
+            width: 10rem;
+            margin: auto 0;
+        }
+        
+        & input {
+            flex: 1;
+            padding: calc(v.$separacion / 4);
+            border: none;
+            border-radius: 1rem;
+            &:disabled {
+                color: v.$blanco;
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.lista-servicios {
+  padding: 0;
+
+  &__li {
+    list-style-type: none;
+    background-color: lighten($color: v.$negro, $amount: 10%);
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  &__p {
+    font-weight: v.$bold;
+    color: v.$azul;
+  }
+  &__span {
+    font-weight: v.$regular;
+    color: v.$blanco;
+  }
+
+  &__botones {
+    display: flex;
+    flex-direction: column;
+
+    @include m.tablet {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    & a {
+      margin: 0;
+    }
+  }
+}

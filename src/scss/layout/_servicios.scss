@@ -1,0 +1,41 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.servicios {
+  display: block;
+
+  @include m.tablet{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__card {
+    width: 90%;
+    align-self: center;
+    background-color: v.$blanco;
+    border-radius: 2rem;
+    padding: 2rem;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    transition: transform 0.8s ease;
+    cursor: pointer;
+
+    & p {
+      color: v.$azul;
+      font-weight: v.$bold;
+      margin: 0 0 1rem 0;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &--selecto {
+      background-color: v.$azul;
+      & p {
+        color: v.$blanco;
+      }
+    }
+  }
+}

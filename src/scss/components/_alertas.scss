@@ -1,0 +1,13 @@
+@use 'base/variables' as v;
+.alerta{
+    text-align: center;
+    padding: calc(v.$separacion / 5);
+    font-weight: bold;
+
+    &__error{
+        background-color: v.$rojo;
+    }
+    &__exito{
+        background-color: v.$verde;
+    }
+}
